@@ -1,0 +1,85 @@
+<div class="container">
+  <h1>New question:</h1>
+  <form  #quizForm="ngForm" novalidate  (ngSubmit)="onSubmit(quizForm)">
+    <div class="row">
+    <mat-form-field appearance="legacy">
+    <mat-label>Type your question</mat-label>
+    <textarea
+    matInput
+    #question="ngModel"
+    [(ngModel)]="quizModel.question"
+    name="question"
+    required
+    [class.is-invalid]="question.invalid && question.touched"
+     matInput
+     ></textarea>
+      <small class="text-danger"
+      [class.d-none]="question.valid || question.untouched"
+      >Question is required</small>
+    </mat-form-field>
+    </div>
+<div class="row">
+    <mat-form-field appearance="outline">
+    <mat-label>Correct answer</mat-label>
+    <input
+    matInput
+    #correctAnswer="ngModel"
+    [(ngModel)]="quizModel.correctAnswer"
+    name="correctAnswer"
+    [class.is-invalid]="correctAnswer.invalid && correctAnswer.touched"
+    required
+    >
+    <small class="text-danger"
+      [class.d-none]="correctAnswer.valid || correctAnswer.untouched">
+    Correct answer is required</small>
+    <mat-icon matSuffix>sentiment_very_satisfied </mat-icon>
+  </mat-form-field>
+    <mat-form-field appearance="outline">
+    <mat-label>Wrong answer 1</mat-label>
+    <input
+    matInput
+    #wrongAnswer1="ngModel"
+    [(ngModel)]="quizModel.wrongAnswer1"
+    name="wrongAnswer1"
+    [class.is-invalid]="wrongAnswer1.invalid && wrongAnswer1.touched"
+    required
+    >
+    <small class="text-danger"
+      [class.d-none]="wrongAnswer1.valid || wrongAnswer1.untouched">
+    This field is required</small>
+    <mat-icon matSuffix>sentiment_very_dissatisfied </mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Wrong answer 2</mat-label>
+    <input
+    matInput
+    #wrongAnswer2="ngModel"
+    [(ngModel)]="quizModel.wrongAnswer2"
+    name="wrongAnswer2"
+    [class.is-invalid]="wrongAnswer2.invalid && wrongAnswer2.touched"
+    required
+    >
+    <small class="text-danger"
+      [class.d-none]="wrongAnswer2.valid || wrongAnswer2.untouched">
+    This field is required</small>
+    <mat-icon matSuffix>sentiment_very_dissatisfied </mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Wrong answer 3</mat-label>
+    <input
+    matInput
+    #wrongAnswer3="ngModel"
+    [(ngModel)]="quizModel.wrongAnswer3"
+    name="wrongAnswer3"
+    [class.is-invalid]="wrongAnswer3.invalid && wrongAnswer3.touched"
+    required
+    >
+    <small class="text-danger"
+      [class.d-none]="wrongAnswer3.valid || wrongAnswer3.untouched">
+    This field is required</small>
+    <mat-icon matSuffix>sentiment_very_dissatisfied </mat-icon>
+  </mat-form-field>
+</div>
+<button class="btn btn-success">ADD</button>
+</form>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <form class="example-form" #quizForm="ngForm" novalidate  (ngSubmit)="onSubmit(quizForm)">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Message</mat-label>
+    <input matInput
+    ngModel
+    name="quiz"
+    #quiz="ngModel"
+    required
+    [class.is-invalid]="quiz.invalid && quiz.touched"
+    >
+    <small class="text-danger"
+    [class.d-none]="quiz.valid || quiz.untouched"
+      >
+    This field is required</small>
+  </mat-form-field>
+  <button class="btn btn-success" type="submit" [disabled]="quiz.invalid">Add Quiz</button>
+</form>
+</div>
+<div class="quiz">
+<div *ngFor="let quiz of user.quizzes">
+              <div class="card1 mt-5 p-3 g-2">
+                <div class="d-flex align-items-center"></div>
+                <div class="mt-3">
+                    <h2 class="text1">Quiz:<br>{{quiz.name}}</h2>
+                </div>
+                <div class="detail mt-5">Questions : {{quiz.quizzes.length}}</div>
+                <div class="mt-3 d-flex justify-content-end px-2"> <button (click)="addQuizz(quiz)" class="btn-submit">Add</button> </div>
+            </div>
+</div>
+</div>

@@ -10,7 +10,8 @@ import { UserService } from '../user.service';
 })
 export class AddQuizzComponent implements OnInit {
   constructor(public router: Router,public userService:UserService) { }
-  public user!:any;
+  public user!: any;
+  public searchedArticle: string = "";
   ngOnInit(): void {
     this.user = this.userService.getLoggedUser()
   }

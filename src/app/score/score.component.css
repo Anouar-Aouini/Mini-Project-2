@@ -1,0 +1,44 @@
+.main {
+    width: 30vw;
+    height: auto;
+    background-image: linear-gradient(to bottom right, #0d47a1, black);
+    margin: auto;
+    position: relative;
+    top: 15vh;
+    padding: 2vw;
+    color: white
+}
+
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif
+}
+
+.overs {
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    margin-left: 9rem;
+    position: relative;
+    bottom: 1vw
+}
+
+tr {
+    border: 2px solid white
+}
+
+.head {
+    font-size: 1.3vw
+}
+
+@media only screen and (max-width: 425px) {
+    .main {
+        width: 100vw;
+        height: 100vw;
+        padding: 4vw
+    }
+
+    .head {
+        font-size: 5vw
+    }
+
+}

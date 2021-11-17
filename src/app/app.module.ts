@@ -23,6 +23,7 @@ import { AddQuestionsComponent } from './add-questions/add-questions.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { PassQuestionComponent } from './pass-question/pass-question.component';
 import { ScoreComponent } from './score/score.component';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ScoreComponent } from './score/score.component';
     AddQuestionsComponent,
     QuestionsComponent,
     PassQuestionComponent,
-    ScoreComponent
+    ScoreComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

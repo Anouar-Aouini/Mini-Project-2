@@ -2,15 +2,15 @@
     <div class="question ml-sm-5 pl-sm-5 pt-2">
         <div class="py-2 h5"><b>Q. {{question.question}}</b></div>
         <mat-radio-group name={{question.id}} class="example-radio-group">
-            <mat-radio-button (click)="chooseAnswer(question.id,'true')" [value]="question.correctAnswer" class="example-radio-button"
+        <mat-radio-button (click)="chooseAnswer(question.id,'true')" [value]="question.correctAnswer" class="example-radio-button"
             >{{question.correctAnswer}}</mat-radio-button>
-               <mat-radio-button [value]="question.wrongAnswer1" class="example-radio-button"
+        <mat-radio-button [value]="question.wrongAnswer1" class="example-radio-button"
                (click)="chooseAnswer(question.id,'false')">{{question.wrongAnswer1}}</mat-radio-button>
-                  <mat-radio-button [value]="question.wrongAnswer2" class="example-radio-button"
+        <mat-radio-button [value]="question.wrongAnswer2" class="example-radio-button"
                    (click)="chooseAnswer(question.id,'false')">{{question.wrongAnswer2}}</mat-radio-button>
-                    <mat-radio-button [value]="question.wrongAnswer3" class="example-radio-button"
+        <mat-radio-button [value]="question.wrongAnswer3" class="example-radio-button"
                      (click)="chooseAnswer(question.id,'false')">{{question.wrongAnswer3}}</mat-radio-button>
-                  </mat-radio-group>
+        </mat-radio-group>
     </div>
     <div class="d-flex align-items-center pt-3">
     </div>

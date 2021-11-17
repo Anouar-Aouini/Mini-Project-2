@@ -8,8 +8,9 @@
                 <div class="d-flex flex-column align-items-center">
                   <button class="btn"><i class="fa fa-dashboard"></i><span>Dashboard</span></button>
                   <button class="btn mt-3"><i class="fa fa-users"></i><span>Users</span></button>
-                   <button class="btn mt-3"><i class="fa fa-inbox"></i><span>Inbox</span></button>
-                  <button class="btn mt-3"><i class="fa fa-book"></i><span>Knowlwdge</span></button>
+                   <button class="btn mt-3"><i class="fa fa-inbox"></i><span>Coaches</span></button>
+                   <button class="btn mt-3" *ngIf="!show"  (click)="showTemp()"><i class="fa fa-book"></i><span>Edit Profile</span></button>
+                  <button class="btn mt-3" *ngIf="show"   (click)="editUser(user!.id)"><i class="fa fa-book"></i><span >Save</span></button>
                   <button (click)="logOut()" class="btn btn-danger mt-3"><i class="fa fa-trash"></i><span >Log Out</span></button> </div>
             </div>
         </div>
@@ -21,10 +22,15 @@
                     <div>
                         <div class="card cardchildchild p-2">
                             <div class="profile1">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBgZbchuTiUtA3Egi1arN4BEQeoTaUtutQ8A&usqp=CAU" height="90" width="90" class="rounded-circle" />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBgZbchuTiUtA3Egi1arN4BEQeoTaUtutQ8A&usqp=CAU"
+                             height="90" width="90" class="rounded-circle" />
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center mt-5">
-                            <span class="name">{{user.username}}</span> <span class="mt-1 name">{{user.email}}</span>
+                            <div *ngIf="show">
+                            <input type="text" [value]="user?.username" class="form-control" #username>
+                            </div>
+                            <span class="name" *ngIf="!show">{{user.username}}</span>
+                            <span class="mt-1 name">{{user.email}}</span>
                             <span class="dummytext mt-3 p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Text elit more smtit.Kimto lee. </span>
                            </div>
                         </div>

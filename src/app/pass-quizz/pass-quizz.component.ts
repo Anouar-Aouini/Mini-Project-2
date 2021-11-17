@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./pass-quizz.component.css']
 })
 export class PassQuizzComponent implements OnInit {
-
+  public searchedArticle: string = "";
   constructor(public userService:UserService,public router:Router,public route:ActivatedRoute,public quizService:QuizzService) { }
   public users?: User[];
   public quizzes:any=[];

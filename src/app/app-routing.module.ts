@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PassQuizzComponent } from './pass-quizz/pass-quizz.component';
+import { QuestionsComponent } from './questions/questions.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
     path: 'auth', component: AuthComponent,
     canActivate: [AuthGuard], children: [
       { path: 'addquizz', component: AddQuizzComponent, canActivate: [CoachGuard] },
-      { path:"addquizz/:id",component:AddQuestionsComponent },
+      { path: "addquizz/:id", component: AddQuestionsComponent },
+      { path: "addquizz/add/:id",component: QuestionsComponent },
       { path: 'passquizz', component: PassQuizzComponent },
       { path: 'dashboard', component: DashboardComponent }
   ]},

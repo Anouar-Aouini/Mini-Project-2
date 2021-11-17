@@ -20,6 +20,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { AddQuestionsComponent } from './add-questions/add-questions.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AddQuestionsComponent } from './add-questions/add-questions.component';
     PassQuizzComponent,
     PageNotFoundComponent,
     NavbarComponent,
-    AddQuestionsComponent
+    AddQuestionsComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,7 @@ import { AddQuestionsComponent } from './add-questions/add-questions.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

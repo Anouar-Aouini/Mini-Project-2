@@ -80,6 +80,6 @@
     <mat-icon matSuffix>sentiment_very_dissatisfied </mat-icon>
   </mat-form-field>
 </div>
-<button class="btn btn-success">ADD</button>
+<button class="btn btn-success" [disabled]="quizForm.invalid">ADD</button>
 </form>
 </div>

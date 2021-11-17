@@ -1,0 +1,46 @@
+<button class="btn btn-primary d-flex align-items-center" type="button" (click)="back()">
+  <i class="fa fa-angle-left mt-1 mr-1"></i>
+  &nbsp;Back
+</button>
+<div class="container" *ngIf="quiz.length===0">
+  <h1>This quiz is empty</h1>
+</div>
+<div class="container mt-5" *ngFor="let question of quiz;let i=index">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>MCQ Quiz</h4><span>({{i+1}} of {{quiz.length}})</span>
+                    </div>
+                </div>
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h2 class="mt-1 ml-2">{{question.question}}</h2>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="brazil" value="brazil"> <span>{{question.correctAnswer}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="Germany" value="Germany"> <span>{{question.wrongAnswer1}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="Indonesia" value="Indonesia"> <span>{{question.wrongAnswer2}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="Russia" value="Russia"> <span>{{question.wrongAnswer3}}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                  <button class="btn btn-primary d-flex align-items-center btn-danger" type="button" (click)="deleteQuestion(question)"><i class="fa mt-1 mr-1" ></i>&nbsp;Delete</button>
+                  <!-- <button class="btn btn-primary border-success align-items-center btn-success" type="button">Next<i class="fa fa-angle-right ml-2"></i></button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

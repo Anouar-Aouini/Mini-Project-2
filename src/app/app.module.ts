@@ -21,6 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { AddQuestionsComponent } from './add-questions/add-questions.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { PassQuestionComponent } from './pass-question/pass-question.component';
+import { ScoreComponent } from './score/score.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { QuestionsComponent } from './questions/questions.component';
     PageNotFoundComponent,
     NavbarComponent,
     AddQuestionsComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    PassQuestionComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,

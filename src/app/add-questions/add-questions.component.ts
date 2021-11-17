@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Quiz } from '../add-quizz/quizz.model';
+import { Question } from '../add-quizz/question.model';
 import { QuizzService } from '../quizz.service';
 import { UserService } from '../user.service';
 
@@ -14,7 +14,7 @@ export class AddQuestionsComponent implements OnInit {
   constructor(public quizService: QuizzService, public userService: UserService, public route: ActivatedRoute) { }
   ngOnInit(): void {
   }
-  quizModel = new Quiz("", "", "", "", "")
+  quizModel = new Question("", "", "", "", "")
   public param:{id:number,name:string}={id:0,name:""}
   onSubmit(quizForm: NgForm) {
     this.param = {

@@ -1,3 +1,5 @@
+import { Question } from "../add-quizz/question.model";
+
 export interface User{
   id: number,
   email: string,
@@ -5,7 +7,7 @@ export interface User{
   quizzes: [{
     id: number,
     name: string,
-    quizzes:[]
+    quizzes:Question[]
   }],
   role: string,
   username:string

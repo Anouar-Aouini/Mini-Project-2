@@ -1,3 +1,17 @@
-<div class="container">
- <mat-card>Simple card</mat-card>
-</div>
+<div class="quiz">
+<div *ngFor="let quiz of quizzes;let i=index">
+              <div class="card1 mt-5 p-3 g-2">
+                <div class="d-flex align-items-center"></div>
+                <div class="mt-3">
+                    <h2 class="text1">Quiz:{{i+1}}<br></h2>
+                    <h2 class="text1">{{quiz.name}}</h2>
+                </div>
+                <div class="detail mt-3">Questions :{{quiz.quizzes.length}}</div>
+
+                <div class="mt-3 d-flex  px-2">
+                  <button class="btn-submit" (click)="passQuiz(quiz)">Pass</button>
+                   <button  class="btn-submit">Add</button>
+                   </div>
+            </div>
+        </div>
+      </div>

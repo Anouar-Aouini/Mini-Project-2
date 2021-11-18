@@ -36,4 +36,8 @@ export class UserService {
     return !!user;
     }
 
+  getCoaches() {
+    return this.getUsers().filter((el:any)=>el.role==="Coach")
+  }
+
 }

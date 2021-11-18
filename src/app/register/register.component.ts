@@ -12,7 +12,7 @@ import { UserService } from '../user.service';
 export class RegisterComponent implements OnInit {
   constructor(private fb: FormBuilder,public router:Router,public userService : UserService) { }
   public registerForm!: FormGroup;
-  public role: string = "Condidate";
+  public role: string = "Candidate";
   public errorMessage = {msg:"",show:false};
   ngOnInit(): void {
       this.registerForm = this.fb.group({

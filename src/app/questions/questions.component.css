@@ -26,7 +26,13 @@ label.radio span {
     text-transform: uppercase
 }
 
-label.radio input:checked+span {
+label.correct input:checked+span {
+    border-color: green;
+    background-color: green;
+    color: #fff
+}
+
+label.wrong input:checked+span {
     border-color: red;
     background-color: red;
     color: #fff

@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../register/User.model';
 import { UserService } from '../user.service';
 
@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
 })
 export class DashboardComponent implements OnInit {
   @ViewChild("username") username?: ElementRef;
-  constructor(public router: Router,public userService:UserService) { }
+  constructor(public router: Router,public userService:UserService, public route:ActivatedRoute) { }
   public user = this.userService.getLoggedUser();
   public show = false;
   ngOnInit(): void {
@@ -34,6 +34,13 @@ export class DashboardComponent implements OnInit {
     this.user = this.userService.getLoggedUser();
     console.log({...this.user,username:this.username?.nativeElement.value})
     this.show = false;
+  }
+  showCandidates() {
+     this.router.navigate(["candidates"],{relativeTo:this.route})
+  }
+
+    showCoaches() {
+     this.router.navigate(["coaches"],{relativeTo:this.route})
   }
 
 }

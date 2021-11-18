@@ -6,9 +6,7 @@
                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBgZbchuTiUtA3Egi1arN4BEQeoTaUtutQ8A&usqp=CAU" height="50" width="50" /> <span>Quizzier</span> </div>
                 <hr class="hline">
                 <div class="d-flex flex-column align-items-center">
-                  <button class="btn"><i class="fa fa-dashboard"></i><span>Dashboard</span></button>
-                  <button class="btn mt-3"><i class="fa fa-users"></i><span>Users</span></button>
-                   <button class="btn mt-3"><i class="fa fa-inbox"></i><span>Coaches</span></button>
+                   <button class="btn mt-3" (click)="showCoaches()"><i class="fa fa-inbox"></i><span>Coaches</span></button>
                    <button class="btn mt-3" *ngIf="!show"  (click)="showTemp()"><i class="fa fa-book"></i><span>Edit Profile</span></button>
                   <button class="btn mt-3" *ngIf="show"   (click)="editUser(user!.id)"><i class="fa fa-book"></i><span >Save</span></button>
                   <button (click)="logOut()" class="btn btn-danger mt-3"><i class="fa fa-trash"></i><span >Log Out</span></button> </div>

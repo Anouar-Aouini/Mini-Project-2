@@ -24,6 +24,7 @@ import { QuestionsComponent } from './questions/questions.component';
 import { PassQuestionComponent } from './pass-question/pass-question.component';
 import { ScoreComponent } from './score/score.component';
 import { SearchPipe } from './search.pipe';
+import { CoachesComponent } from './coaches/coaches.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { SearchPipe } from './search.pipe';
     QuestionsComponent,
     PassQuestionComponent,
     ScoreComponent,
-    SearchPipe
+    SearchPipe,
+    CoachesComponent
   ],
   imports: [
     BrowserModule,

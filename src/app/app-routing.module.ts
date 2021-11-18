@@ -5,6 +5,7 @@ import { AddQuizzComponent } from './add-quizz/add-quizz.component';
 import { AuthGuard } from './auth.guard';
 import { AuthComponent } from './auth/auth.component';
 import { CoachGuard } from './coach.guard';
+import { CoachesComponent } from './coaches/coaches.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
       { path: 'passquizz', component: PassQuizzComponent },
       { path: 'passquizz/:id/:id', component: ScoreComponent},
       { path: "passquizz/:id", component: PassQuestionComponent},
-      { path: 'dashboard', component: DashboardComponent }
+      {path: 'dashboard', component: DashboardComponent},
+          { path: "dashboard/coaches", component: CoachesComponent }
   ]},
   { path:"**",component:PageNotFoundComponent }
 ];

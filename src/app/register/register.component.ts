@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
       username: ["", Validators.required],
       role:["", Validators.required]
       }, { validator: PasswordValidator });
+    this.role="Candidate"
   }
 
   get username() {

@@ -157,7 +157,6 @@ body {
     cursor: pointer
 }
 
-
 .cardchildchild .profile1 {
     position: absolute;
     border-radius: 50%;
@@ -166,6 +165,10 @@ body {
     align-items: center;
     justify-content: center;
     right: 120px
+}
+
+.username{
+  margin-left: 2rem;
 }
 
 .name {

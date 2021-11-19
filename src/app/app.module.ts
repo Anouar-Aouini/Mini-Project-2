@@ -25,6 +25,8 @@ import { PassQuestionComponent } from './pass-question/pass-question.component';
 import { ScoreComponent } from './score/score.component';
 import { SearchPipe } from './search.pipe';
 import { CoachesComponent } from './coaches/coaches.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 
 @NgModule({
@@ -57,7 +59,7 @@ import { CoachesComponent } from './coaches/coaches.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

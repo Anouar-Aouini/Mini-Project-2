@@ -18,10 +18,10 @@
     </form>
 </div>
     <div class="container">
-      <input type="text" placeholder="Type a quiz name" class="form-control" [(ngModel)]="searchedArticle">
+      <input type="text" placeholder="Type a quiz name" class="form-control" [(ngModel)]="searchedQuiz">
     </div>
                    <div class="quiz">
-                   <div *ngFor="let quiz of user.quizzes | search:searchedArticle:'name'">
+                   <div *ngFor="let quiz of pageSlice | search:searchedQuiz:'name'">
                    <div class="card1 mt-5 p-3 g-2">
                    <div class="d-flex align-items-center"></div>
                    <div class="mt-3">
@@ -36,3 +36,9 @@
                    </div>
                    </div>
                    </div>
+                    <mat-paginator [length]="user.quizzes.length"
+                    [pageSize]="4"
+                    [pageSizeOptions]="[4, 8, 25, 100]"
+                    aria-label="Select page"
+                    (page)="onChangePage($event)">
+                    </mat-paginator>

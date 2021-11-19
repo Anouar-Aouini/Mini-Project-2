@@ -11,8 +11,8 @@
                                 [(ngModel)]="role"
                                 >
                              <mat-radio-button
-                             value="Condidate"
-                             checked
+                             value="Candidate"
+                                checked
                                  >
                                 Candidate
                              </mat-radio-button>
@@ -81,7 +81,7 @@
                             </div>
                            </div>
                           <div class="row justify-content-center my-3 px-3">
-                          <button class="btn-block btn-color" type="submit" >Sign up</button>
+                          <button class="btn-block btn-color" type="submit" [disabled]="registerForm.invalid" >Sign up</button>
                           </div>
                         </form>
                     </div>

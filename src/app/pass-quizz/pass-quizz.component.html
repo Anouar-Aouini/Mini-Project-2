@@ -1,4 +1,8 @@
-                   <div class="quiz">
+                  <div class="container">
+                    <h1 *ngIf="!quizzes.length">There is no quizzes yet!</h1>
+                  </div>
+<div *ngIf="quizzes.length">
+                   <div  class="quiz" >
                    <div class="container">
                    <input type="text" placeholder="Type a quiz name" class="form-control" [(ngModel)]="searchedQuiz">
                    </div>
@@ -22,3 +26,6 @@
                     aria-label="Select page"
                     (page)="onChangePage($event)">
                     </mat-paginator>
+</div>
+
+

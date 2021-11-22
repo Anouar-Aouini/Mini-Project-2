@@ -26,6 +26,7 @@ import { ScoreComponent } from './score/score.component';
 import { SearchPipe } from './search.pipe';
 import { CoachesComponent } from './coaches/coaches.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { TransformPipe } from './transform.pipe';
 
 
 
@@ -45,7 +46,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     PassQuestionComponent,
     ScoreComponent,
     SearchPipe,
-    CoachesComponent
+    CoachesComponent,
+    TransformPipe
   ],
   imports: [
     BrowserModule,

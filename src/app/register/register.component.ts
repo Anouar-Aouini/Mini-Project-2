@@ -19,10 +19,9 @@ export class RegisterComponent implements OnInit {
       email: ["", [Validators.required,Validators.email]],
       password: ["", [Validators.required, Validators.minLength(6)]],
       confirmPassword: ["",[ Validators.required, Validators.minLength(6)]],
-      username: ["", Validators.required],
-      role:["", Validators.required]
+      username: ["", Validators.required]
       }, { validator: PasswordValidator });
-    this.role="Candidate"
+    console.log(this.role)
   }
 
   get username() {
@@ -36,6 +35,7 @@ export class RegisterComponent implements OnInit {
   get password() {
     return this.registerForm.get('password');
   }
+
   get confirmPassword() {
     return this.registerForm.get('confirmPassword');
   }

@@ -1,3 +1,6 @@
+                  <div class="container">
+                    <h1 *ngIf="!coaches?.length">There is no quizzes yet!</h1>
+                  </div>
 <div class="container coach ">
         <div class="coach-card mt-5" *ngFor="let coach of coaches">
             <div class="card d-flex flex-column align-items-center justify-content-center">

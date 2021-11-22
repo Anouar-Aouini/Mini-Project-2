@@ -31,6 +31,5 @@ export class PassQuestionComponent implements OnInit {
   checkResult() {
     let score = this.answers.filter((el: any) => el.answer === 1).length;
     this.router.navigate(["score", { score:score+"/"+this.answers.length }], { relativeTo: this.route });
-    console.log(this.quizzes)
   }
 }

@@ -11,13 +11,17 @@
     >
     <small class="text-danger"
     [class.d-none]="quiz.valid || quiz.untouched"
-      >
+    >
     This field is required</small>
     </mat-form-field>
     <button class="btn btn-success" type="submit" [disabled]="quiz.invalid">Add Quiz</button>
     </form>
 </div>
-    <div class="container">
+<div class="container"  *ngIf="!user.quizzes.length">
+   <h1>You don't have any quizzes yet!</h1>
+</div>
+<div *ngIf="user.quizzes.length">
+      <div class="container">
       <input type="text" placeholder="Type a quiz name" class="form-control" [(ngModel)]="searchedQuiz">
     </div>
                    <div class="quiz">
@@ -42,3 +46,5 @@
                     aria-label="Select page"
                     (page)="onChangePage($event)">
                     </mat-paginator>
+     </div>
+

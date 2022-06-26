@@ -21,7 +21,6 @@ export class RegisterComponent implements OnInit {
       confirmPassword: ["",[ Validators.required, Validators.minLength(6)]],
       username: ["", Validators.required]
       }, { validator: PasswordValidator });
-    console.log(this.role)
   }
 
   get username() {
